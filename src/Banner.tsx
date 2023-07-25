@@ -1,11 +1,11 @@
 //Banner contains Nav functionality as well
-import React from 'react'
+import React from 'react';
 
 const Banner = () => {
   return (
     <nav>
       <div id="nav-left">
-      <h1>Association</h1>
+        <h1>Association</h1>
       </div>
 
       <div></div>
@@ -16,7 +16,7 @@ const Banner = () => {
         <p>Currency</p>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

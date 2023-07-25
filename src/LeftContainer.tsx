@@ -22,4 +22,4 @@ const LeftContainer = (props) => {
   )
 }
 
-export default LeftContainer
+export default LeftContainer;

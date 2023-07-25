@@ -3,17 +3,12 @@ import React from 'react'
 import WeightForm from './WeightForm.tsx'
 import {StyleSheet, View, Text} from 'react-native'
 
-const LeftContainer = () => {
-       
-//   const forms = [];
-//   const units = ['Kilograms', 'Pounds', 'Stone'];
-//   for (let i = 0; i < units.length; i++) {
-//     forms.push(<WeightForm unit={units[i]}/>)
-//   };
+const LeftContainer = (props) => {
+  const { kilo, setKilo, pound, setPound, stone, setStone, reset } = props
 
   return (
-    <div className="leftContainer" style={{ display: 'flex', flexDirection: 'row', }}>
-    <WeightForm />
+    <div id="left-container">
+    <WeightForm kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} />
     </div>
   )
 }

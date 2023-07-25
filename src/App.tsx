@@ -9,14 +9,17 @@ import './App.css'
 function App() {
   //State for comparison. 
   const [kilo, setKilo] = useState('');
-  const [pound, setPounds] = useState('');
+  const [pound, setPound] = useState('');
   const [stone, setStone] = useState('');
 
-  const reset = () => {
-    setKilo('')
-    setPounds('')
-    setStone('')
-  }
+  return (
+    <>
+    <Banner />
+    <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} />
+    <RightContainer />
+    <ComparedTo />
+    </>
+  )
 
   //post request
     //set data returned from request in relevant state
@@ -59,14 +62,6 @@ function App() {
     //   }
     
 
-  return (
-    <>
-    <Banner />
-    <NavBar />
-    <LeftContainer />
-    <RightContainer />
-    <ComparedTo />
-    </>
-  )
+  
 }
 export default App;

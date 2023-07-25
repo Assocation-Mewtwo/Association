@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import cors from 'cors';
 import { dirname, resolve } from 'path';
 import compression from 'compression';
+import * as postGramsRouter from './routes/postgrams';
 
 // We utilize the fileURLToPath function from the url module to convert the import.meta.url to the corresponding file path??
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +20,10 @@ app.use(compression());
 app.use(cors());
 app.use(express.json());
 
+//Router redirects
+app.use('/postgrams', postGramsRouter, (req, res) => {
+  //need response
+})
 
 
 

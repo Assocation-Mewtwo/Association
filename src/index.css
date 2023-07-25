@@ -1,9 +1,11 @@
+/* App.tsx styling */
+
 body {
   margin-left: 15vh;
   display: flex;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
-  /* align-items: stretch; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;

@@ -3,7 +3,7 @@ import Banner from './Banner.tsx'
 import LeftContainer from './LeftContainer.tsx'
 import RightContainer from './RightContainer.tsx'
 import ComparedTo from './ComparedTo'
-import NavBar from './NavBar.tsx'
+import WeightForm from './WeightForm.tsx'
 import './App.css'
 
 function App() {
@@ -12,54 +12,61 @@ function App() {
   const [pound, setPound] = useState('');
   const [stone, setStone] = useState('');
 
+  const conversionResults = () => {
+    if (kilo){
+      setStone(kilo * 0.157473)
+      setPound(kilo * 2.20462)
+    } else if (stone){
+      setKilo(stone * 6.35029)
+      setPound(stone * 14)
+    } else if (pound){
+      setKilo(pound * 0.453592)
+      setStone(pound * 0.0714286)
+    }
+  }
+
+  // form input conversion to grams for post request to db
+  const sendGrams = async () => {
+    let body;
+    if (kilo){
+      body = kilo * 1000
+    } else if (stone){
+      body = (stone * 6.35029) * 1000
+    } else if (pound){
+      body = (pound * 0.453592) * 1000
+    }
+      try {
+        //Waiting for the route to be sent. 
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({grams: body}),
+        });
+        if (response.ok) {
+          console.log('Grams sent to Donald')
+          conversionResults()
+        } else {
+          console.error('Donald didn\'t get Grams');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+
   return (
     <>
     <Banner />
-    <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} />
+    <WeightForm kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} />
+    <LeftContainer />
     <RightContainer />
     <ComparedTo />
     </>
   )
 
-  //post request
-    //set data returned from request in relevant state
-
-    // character input sensitivity to disable sibling input forms
-
-    // const checkState = () => {
-      
-    //   if (kilo){
-    //     setPounds()
-    //     setStone()
-    //   } else if (pound){
-    //     setKilo()
-    //     setStone();
-    //   } else {
-    //     setKilo()
-    //     setPounds()
-    //   }
-    // }
-
-    // const postkilos = async () => {
-    //   let body = 0;
-    //   if (kilo)
-      
-    //   try {
-    //     const response = await fetch('/api', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify(),
-    //     });
-    //     if (response.ok) {
   
-    //     } else {
-    //       console.error('Error ');
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
     
 
   

@@ -2,11 +2,19 @@ import React from 'react'
 import { useState } from 'react'
 
 const WeightForm = (props) => {
+<<<<<<< HEAD
   const { kilo, setKilo, pound, setPound, stone, setStone } = props
+=======
+  const { kilo, setKilo, pound, setPound, stone, setStone, sendGrams } = props
+>>>>>>> dev
   const [stoneInput, setStoneInput] = useState(false);
   const [kiloInput, setKiloInput] = useState(false);
   const [poundsInput, setPoundsInput] = useState(false);
 
+<<<<<<< HEAD
+=======
+  // form logic to ensure only one weight input will be part of conversion and post request
+>>>>>>> dev
   const changeKilo = (e) => {
     if (e.target.value.length === 0){
       setStoneInput(false)
@@ -17,7 +25,10 @@ const WeightForm = (props) => {
     setPoundsInput(true)
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
   const changePounds = (e) => {
     if (e.target.value.length === 0){
       setStoneInput(false)
@@ -38,6 +49,7 @@ const WeightForm = (props) => {
     setKiloInput(true)
   }
 }
+<<<<<<< HEAD
 
   const HereComeKilosDonald = async () => {
     let body;
@@ -79,6 +91,9 @@ const WeightForm = (props) => {
       }
     }
 
+=======
+  
+>>>>>>> dev
   return (
     <form id="weight-form" style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
       <label className='form-label' style={{ display: 'flex', flexDirection: 'column' }}>
@@ -96,9 +111,12 @@ const WeightForm = (props) => {
         <input type="text" className="stone" onChange={e => changeStone(e)}  disabled={stoneInput}/>
       </label>
 
+<<<<<<< HEAD
       <button className='formbtn' type='button' onSubmit={test}>Submit</button>
+=======
+      <button className='formbtn' type='button' onSubmit={sendGrams}>Submit</button>
+>>>>>>> dev
     </form>
-
   )
 }
 

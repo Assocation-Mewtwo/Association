@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const LeftContainer = () => {
   // const { kilo, setKilo, pound, setPound, stone, setStone, sendGrams} = props
@@ -10,4 +10,4 @@ const LeftContainer = () => {
   )
 }
 
-export default LeftContainer
+export default LeftContainer;

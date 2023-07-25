@@ -1,12 +1,11 @@
 /* component .tsx file styling */
 
-
-  /* banner container styling */
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-content: space-around;
-  }
+/* banner container styling */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
 
   #nav-right {
     display: flex;
@@ -19,7 +18,7 @@
     justify-content: space-around;
   }
 
-  /* left container styling */
+/* left container styling */
 #left-container {
   margin: 1em 1em;
   border: 1px solid;
@@ -29,53 +28,13 @@
   align-items: center
   }
 
-  /* weight form container styling */
+/* weight form container styling */
 #weight-form {
   background-color: lightblue;
   padding: 1rem;
-}
-
-
-/* right container styling */
-#right-container {
-  margin: 1em 1em;
-  border: 1px solid;
-  padding: 15% 15%;
-
-}
-
-/* ComparedTo styling */
-
-/* Dropup/down menu */
-/* drop up menu button */
-#dropbtn {
-  background-color: yellow;
-}
-
-/* drop up menu container */
-.dropup {
-  position: relative;
-  display: inline-block;
-}
-
-#dropmenu {
-  display: none;
-  position: absolute;
-}
-
-#dropmenu a {
-  display: block;
-}
-
-.dropup:hover #dropmenu {
-  display: block;
-}
-
-#weight-form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
 .weight-input {
@@ -87,3 +46,29 @@
 .submitInput {
   border-radius: 5px;
 }
+
+/* right container styling */
+#right-container {
+  margin: 1em 1em;
+  border: 1px solid;
+  padding: 15% 15%;
+}
+
+/* ComparedTo styling */
+/* Dropup/down menu */
+#compare {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#compare-menu {
+}
+
+.dropup {
+  /* background-color: purple; */
+  align-self: center;
+  padding-left: 2em;
+}
+
+

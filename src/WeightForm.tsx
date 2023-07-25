@@ -40,24 +40,17 @@ const WeightForm = (props) => {
 }
   
   return (
-    <form id="weight-form" style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
-      <label className='form-label' style={{ display: 'flex', flexDirection: 'column' }}>
-        <h3>Pounds</h3>
-        <input type='text' className="pounds" onChange={e => changePounds(e)} disabled={poundsInput}></input>
-      </label>
-        
-      <label className='form-label' style={{ display: 'flex', flexDirection: 'column' }}>
-        <h3>Kilograms</h3>
-        <input type="text" className="kilograms" onChange={e => changeKilo(e)}  disabled={kiloInput}/>
-      </label>
+    <div id="weight-form">
       
-      <label className='form-label' style={{ display: 'flex', flexDirection: 'column' }}>
-        <h3>Stone</h3>
-        <input type="text" className="stone" onChange={e => changeStone(e)}  disabled={stoneInput}/>
-      </label>
+      <input type='text' className="weight-input" placeholder="Pounds" onChange={e => changePounds(e)} disabled={poundsInput}></input>
+        
+      <input type="text" className="weight-input" placeholder="Kilograms" onChange={e => changeKilo(e)}  disabled={kiloInput}/>
 
-      <button className='formbtn' type='button' onSubmit={sendGrams}>Submit</button>
-    </form>
+      <input type="text" className="weight-input" placeholder="Stone" onChange={e => changeStone(e)}  disabled={stoneInput}/>
+
+      <button className='submitInput' type='button' onSubmit={sendGrams}>Submit</button>
+      
+    </div>
   )
 }
 

@@ -1,13 +1,32 @@
+/* component .tsx file styling */
+
+
+  /* banner container styling */
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+
+  #nav-right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* left container styling */
 #left-container {
   display: flex;
   flex-direction: row;
   align-items: center
   }
 
+  /* weight form container styling */
 #weight-form {
   background-color: pink;
 }
 
+
+/* right container styling */
 #right-container {
   margin: 1em 1em;
   border: 1px solid;
@@ -15,6 +34,9 @@
 
 }
 
+/* ComparedTo styling */
+
+/* Dropup/down menu */
 /* drop up menu button */
 #dropbtn {
   background-color: yellow;

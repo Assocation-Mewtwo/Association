@@ -1,0 +1,15 @@
+/* This page sets up querying for accessing the image database */
+
+import { Pool } from 'pg';
+const myURI = 'postgres://zymmszcv:jTEVoQ1TQxHQOx7Uwzcj7za4oXMXCxMT@mahmud.db.elephantsql.com/zymmszcv'
+
+const pool = new Pool ({
+  connectionString: myURI,
+})
+
+export default {
+  query: (text, params, callback) => {
+    console.log('Querying the database');
+    return pool.query(text, params, callback);
+  }
+}

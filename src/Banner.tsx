@@ -3,7 +3,10 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div>Association</div>
+    <nav>
+      <h1>Association</h1>
+      
+    </nav>
   )
 }
 

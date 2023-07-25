@@ -3,7 +3,18 @@ import React from 'react'
 
 const ComparedTo = () => {
   return (
-    <div>ComparedTo</div>
+    <div id='compare'>
+      <h3>ComparedTo</h3>
+
+      <div className='dropup'>
+      <button id='dropbtn'>Select</button>
+        <div id='dropmenu'>
+          <a href="#">paperclip</a>
+          <a href="#">pineapple</a>
+          <a href="#">pontoon boat</a>
+        </div>
+      </div>
+    </div>
   )
 }
 

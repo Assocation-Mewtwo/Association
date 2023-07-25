@@ -22,7 +22,6 @@ app.use(express.json());
 
 
 
-
 ////////ERROR HANDLING/////////////
 // Route error handler
 app.use('*', (req, res) => {

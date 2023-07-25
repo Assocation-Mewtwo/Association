@@ -7,21 +7,44 @@ nav {
   align-content: space-around;
 }
 
-#nav-right {
-  display: flex;
-  flex-direction: row;
-}
+  #nav-right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
 /* left container styling */
 #left-container {
   margin: 1em 1em;
   border: 1px solid;
   padding: 15% 15%;
-}
+  display: flex;
+  flex-direction: row;
+  align-items: center
+  }
 
 /* weight form container styling */
 #weight-form {
-  background-color: pink;
+  background-color: lightblue;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.weight-input {
+  border-radius: 5px;
+  box-shadow: 12px 6px 2px 1px rgba(83, 83, 185, 0.2);
+
+}
+
+.submitInput {
+  border-radius: 5px;
 }
 
 /* right container styling */
@@ -32,9 +55,7 @@ nav {
 }
 
 /* ComparedTo styling */
-
 /* Dropup/down menu */
-/* drop up menu button */
 #compare {
   display: flex;
   flex-direction: row;
@@ -49,3 +70,5 @@ nav {
   align-self: center;
   padding-left: 2em;
 }
+
+

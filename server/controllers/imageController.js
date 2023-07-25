@@ -1,4 +1,4 @@
-import * as db from './models/imageModel';
+import db from '../models/imageModel.js';
 
 const imageController = {};
 
@@ -18,17 +18,22 @@ imageController.getImage = async (req, res, next) => {
   //QUERY DATABASE
   //static query
   const query = `
-  
+    SELECT *
+    FROM weight_image
+    WHERE grams <= ${grams} AND (${grams}/grams) <= 100
+    ORDER BY grams DESC
   `;
 
   const images = await db.query(query)
-    .then(data => console.log(data))
+    .then(data => data.rows)
     .catch(err => next({
       log: 'Error occurred while fetching information from the database',
       message: { err: `${err}`},
     }))
 
-    return next();
+  res.locals.imageReturn = images
+
+  return next();
 }
 
 export default imageController;

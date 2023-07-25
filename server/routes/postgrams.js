@@ -1,9 +1,10 @@
-import { express } from 'express';
-const router = express.Router();
+import { Router } from 'express';
+import imageController from '../controllers/imageController.js';
+const postGramsRouter = Router();
 //tie in controllers here
 
-router.post('/', (req, res) => {
-
+postGramsRouter.post('/', imageController.getImage, (req, res) => {
+  return res.status(200).json(res.locals.imageReturn);
 })
 
-export default router;
+export default postGramsRouter;

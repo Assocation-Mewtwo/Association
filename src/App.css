@@ -26,6 +26,7 @@
   /* weight form container styling */
 #weight-form {
   background-color: lightblue;
+  padding: 1rem;
 }
 
 
@@ -64,18 +65,12 @@
   display: block;
 }
 
-.form-label {
-  padding: 1rem;
-  width: 6rem;
-  
-}
-
 .weight-input {
   border-radius: 5px;
+  box-shadow: 12px 6px 2px 1px rgba(83, 83, 185, 0.2);
 
 }
 
-.formbtn {
-  height: 5rem;
-
+.submitInput {
+  border-radius: 5px;
 }

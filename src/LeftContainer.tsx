@@ -5,7 +5,7 @@ const LeftContainer = () => {
 
   return (
     <div id="left-container">
-      
+      hello
     </div>
   )
 }

@@ -60,8 +60,12 @@ function App() {
     <>
     <Banner />
     <WeightForm kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} />
+
+    <div id="main-container">
     <LeftContainer />
     <RightContainer />
+    </div>
+
     <ComparedTo />
     </>
   )

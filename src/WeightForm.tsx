@@ -40,7 +40,7 @@ const WeightForm = (props) => {
 }
   
   return (
-    <div id="weight-form" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around'  }}>
+    <div id="weight-form">
       
       <input type='text' className="weight-input" placeholder="Pounds" onChange={e => changePounds(e)} disabled={poundsInput}></input>
         

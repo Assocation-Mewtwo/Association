@@ -13,6 +13,12 @@
     flex-direction: row;
   }
 
+  #main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   /* left container styling */
 #left-container {
   margin: 1em 1em;
@@ -63,6 +69,13 @@
 
 .dropup:hover #dropmenu {
   display: block;
+}
+
+#weight-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
 }
 
 .weight-input {

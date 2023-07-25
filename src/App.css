@@ -15,6 +15,9 @@
 
   /* left container styling */
 #left-container {
+  margin: 1em 1em;
+  border: 1px solid;
+  padding: 15% 15%;
   display: flex;
   flex-direction: row;
   align-items: center
@@ -22,7 +25,7 @@
 
   /* weight form container styling */
 #weight-form {
-  background-color: pink;
+  background-color: lightblue;
 }
 
 
@@ -59,4 +62,20 @@
 
 .dropup:hover #dropmenu {
   display: block;
+}
+
+.form-label {
+  padding: 1rem;
+  width: 6rem;
+  
+}
+
+.weight-input {
+  border-radius: 5px;
+
+}
+
+.formbtn {
+  height: 5rem;
+
 }

@@ -1,62 +1,51 @@
 /* component .tsx file styling */
 
-
-  /* banner container styling */
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-content: space-around;
-  }
-
-  #nav-right {
-    display: flex;
-    flex-direction: row;
-  }
-
-  /* left container styling */
-#left-container {
+/* banner container styling */
+nav {
   display: flex;
   flex-direction: row;
-  align-items: center
-  }
+  align-content: space-around;
+}
 
-  /* weight form container styling */
+#nav-right {
+  display: flex;
+  flex-direction: row;
+}
+
+/* left container styling */
+#left-container {
+  margin: 1em 1em;
+  border: 1px solid;
+  padding: 15% 15%;
+}
+
+/* weight form container styling */
 #weight-form {
   background-color: pink;
 }
-
 
 /* right container styling */
 #right-container {
   margin: 1em 1em;
   border: 1px solid;
   padding: 15% 15%;
-
 }
 
 /* ComparedTo styling */
 
 /* Dropup/down menu */
 /* drop up menu button */
-#dropbtn {
-  background-color: yellow;
+#compare {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-/* drop up menu container */
+#compare-menu {
+}
+
 .dropup {
-  position: relative;
-  display: inline-block;
-}
-
-#dropmenu {
-  display: none;
-  position: absolute;
-}
-
-#dropmenu a {
-  display: block;
-}
-
-.dropup:hover #dropmenu {
-  display: block;
+  /* background-color: purple; */
+  align-self: center;
+  padding-left: 2em;
 }

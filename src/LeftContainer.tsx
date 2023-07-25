@@ -4,25 +4,17 @@ import WeightForm from './WeightForm.tsx'
 import {StyleSheet, View, Text} from 'react-native'
 
 const LeftContainer = () => {
-    
-
-  const styles = StyleSheet.create({
-    container: {
-      backgroundColor: 'blue',
-      padding: 10,
-    },
-  });
-    
-  const forms = [];
-  const units = ['Kilograms', 'Pounds', 'Stone'];
-  for (let i = 0; i < units.length; i++) {
-    forms.push(<WeightForm unit={units[i]}/>)
-  };
+       
+//   const forms = [];
+//   const units = ['Kilograms', 'Pounds', 'Stone'];
+//   for (let i = 0; i < units.length; i++) {
+//     forms.push(<WeightForm unit={units[i]}/>)
+//   };
 
   return (
-    <View style={styles.container}>
-    {forms}
-    </View>
+    <div className="leftContainer" style={{ display: 'flex', flexDirection: 'row', }}>
+    <WeightForm />
+    </div>
   )
 }
 

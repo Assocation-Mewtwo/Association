@@ -1,35 +1,67 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Banner from './Banner.tsx'
+import LeftContainer from './LeftContainer.tsx'
+import RightContainer from './RightContainer.tsx'
+import ComparedTo from './ComparedTo'
+import NavBar from './NavBar.tsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //State for comparison. 
+  const [kilo, setKilo] = useState('');
+  const [pound, setPound] = useState('');
+  const [stone, setStone] = useState('');
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Banner />
+    <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} />
+    <RightContainer />
+    <ComparedTo />
     </>
   )
-}
 
-export default App
+  //post request
+    //set data returned from request in relevant state
+
+    // character input sensitivity to disable sibling input forms
+
+    // const checkState = () => {
+      
+    //   if (kilo){
+    //     setPounds()
+    //     setStone()
+    //   } else if (pound){
+    //     setKilo()
+    //     setStone();
+    //   } else {
+    //     setKilo()
+    //     setPounds()
+    //   }
+    // }
+
+    // const postkilos = async () => {
+    //   let body = 0;
+    //   if (kilo)
+      
+    //   try {
+    //     const response = await fetch('/api', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify(),
+    //     });
+    //     if (response.ok) {
+  
+    //     } else {
+    //       console.error('Error ');
+    //     }
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    
+
+  
+}
+export default App;

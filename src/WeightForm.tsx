@@ -48,7 +48,7 @@ const WeightForm = (props) => {
 
       <input type="text" className="weight-input" placeholder="Stone" onChange={e => changeStone(e)}  disabled={stoneInput}/>
 
-      <button className='submitInput' type='button' onSubmit={sendGrams}>Submit</button>
+      <button className='submitInput' type='button' onClick={sendGrams}>Submit</button>
       
     </div>
   )

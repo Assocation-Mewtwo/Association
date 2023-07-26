@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
 
 // Initiate express server
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Enable compression middleware for better performance & other middleware
 app.use(compression());

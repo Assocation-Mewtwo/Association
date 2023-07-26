@@ -4,6 +4,7 @@ const postGramsRouter = Router();
 //tie in controllers here
 
 postGramsRouter.post('/', imageController.getImage, (req, res) => {
+  console.log('postgrams.js line 7')
   return res.status(200).json(res.locals.imageReturn);
 })
 

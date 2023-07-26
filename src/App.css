@@ -167,9 +167,12 @@ nav {
   flex-wrap: wrap;
   overflow-y: scroll;
   background: white;
-  background-image: url("https://iili.io/HQmW1d7.png");
+  /* background-image: url("https://iili.io/HQmW1d7.png"); */
   background-size: contain;
-  opacity: 100%;
+}
+
+#cat {
+  opacity: 1;
 }
 
 /* ComparedTo styling */

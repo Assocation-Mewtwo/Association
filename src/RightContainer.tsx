@@ -14,6 +14,10 @@ const RightContainer = (props) => {
   //get nearest whole number
   const numOfImagesRequired = Math.floor(kilo * 1000 / gramsOfCompareObj);
   //for loop that many times pushing in image component to an array
+
+    let image = document.getElementById("cat");
+    image.style.opacity = 0;
+  
   
   for (let i = 0; i < numOfImagesRequired; i++) {
     images.push(<ImageComponent index={i} imageLink={imageLink}/>)
@@ -23,15 +27,13 @@ const RightContainer = (props) => {
     populateImages();
   }
 
-  //   let image = document.getElementById("#right-container");
-  //   let opacity = 0;
-  //   image.style.opacity = opacity;
 
   const returnObj = images.length ? images : '';
 
   return (
     <div id='right-container'>
       {returnObj}
+      <img id="cat" src="https://iili.io/HQmW1d7.png" alt="cat"></img>
     </div>
   )
 }

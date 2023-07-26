@@ -11,32 +11,18 @@ function App() {
   const [kilo, setKilo] = useState('');
   const [pound, setPound] = useState('');
   const [stone, setStone] = useState('');
+  const [kilo2, setKilo2] = useState('');
+  const [pound2, setPound2] = useState('');
+  const [stone2, setStone2] = useState('');
   const [compareOptions, setCompareOptions] = useState([])
-
-  const conversionResults = () => {
-    if (kilo){
-      setStone(kilo * 0.157473)
-      setPound(kilo * 2.20462)
-    } else if (stone){
-      setKilo(stone * 6.35029)
-      setPound(stone * 14)
-    } else if (pound){
-      setKilo(pound * 0.453592)
-      setStone(pound * 0.0714286)
-    }
-  }
-
+  const [imageIndex, setImageIndex] = useState(0)
 
   // form input conversion to grams for post request to db
   const sendGrams = async () => {
-    let body;
-    if (kilo){
-      body = kilo * 1000
-    } else if (stone){
-      body = (stone * 6.35029) * 1000
-    } else if (pound){
-      body = (pound * 0.453592) * 1000
-    }
+      const body = kilo * 1000;
+      setKilo2(kilo);
+      setPound2(pound);
+      setStone2(stone);
       try {
         //Waiting for the route to be sent. 
         console.log('body', body)
@@ -52,7 +38,8 @@ function App() {
           const data = await rawResponse.json();       
           console.log('Grams sent to Donald')
           setCompareOptions(data);
-          conversionResults()
+          //deafult to the first image
+          setImageIndex(0);
         } else {
           console.error('Donald didn\'t get Grams');
         }
@@ -67,8 +54,8 @@ function App() {
     <Banner />
     <WeightForm kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} />
     <div id="main-container">
-    <LeftContainer />
-    <RightContainer />
+    <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} kilo2={kilo2} setKilo2={setKilo2} pound2={pound2} setPound2={setPound2} stone2={stone2} setStone2={setStone2}  />
+    <RightContainer kilo={kilo} compareOptions={compareOptions} imageIndex={imageIndex}/>
     </div>
     <ComparedTo compareOptions={compareOptions} setCompareOptions={setCompareOptions}/>
     </>

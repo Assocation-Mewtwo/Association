@@ -10,7 +10,7 @@ const Options = ({ id, compareOptions }: optionsProps) => {
   return (
     // need to build out tbdFunction
     <>
-      <option key={`option${id}`} value={`${id}`}>
+      <option key={`option${id}`} value={`${id}`} className="imageOption">
         {compareOptions[id].name_single}
       </option>
     </>

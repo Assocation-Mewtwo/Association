@@ -4,7 +4,7 @@ import Options from './Options';
 
 const ComparedTo = (props) => {
   // props coming from post request response body
-  const { compareOptions, setCompareOptions, setImageIndex } = props;
+  const { compareOptions, setCompareOptions, setImageIndex} = props;
 
   const optionsArray = [];
 

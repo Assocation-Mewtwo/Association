@@ -163,8 +163,8 @@ nav {
   display: flex;
   min-width: 45%;
   max-width: 45%;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   overflow-y: scroll;
   background: white;
   /* background-image: url("https://iili.io/HQmW1d7.png"); */
@@ -173,6 +173,14 @@ nav {
 
 #cat {
   opacity: 1;
+}
+
+#right-sub-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* ComparedTo styling */

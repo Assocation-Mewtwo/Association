@@ -5,6 +5,8 @@ import ImageComponent from './ImageComponent'
 const RightContainer = (props) => {
   const {kilo, compareOptions, imageIndex} = props; 
   const images = []
+  let count = '';
+  let name = '';
   const populateImages = () => {
   //total grams
   //grams of the currently selected object
@@ -13,6 +15,15 @@ const RightContainer = (props) => {
 
   //get nearest whole number
   const numOfImagesRequired = Math.floor(kilo * 1000 / gramsOfCompareObj);
+  if(numOfImagesRequired > 1) {
+    count = numOfImagesRequired;
+    name = compareOptions[imageIndex].name_plural;
+  }
+  else if(numOfImagesRequired === 1) {
+    count = numOfImagesRequired;
+    name = compareOptions[imageIndex].name_single;
+  }
+  else count = name = '';
   //for loop that many times pushing in image component to an array
 
     let image = document.getElementById("cat");
@@ -30,10 +41,14 @@ const RightContainer = (props) => {
 
   const returnObj = images.length ? images : '';
 
+
   return (
     <div id='right-container'>
-      {returnObj}
-      <img id="cat" src="https://iili.io/HQmW1d7.png" alt="cat"></img>
+      <div id='message'>{`${count} ${name}`}</div>
+      <div id="right-sub-container">
+        {returnObj}
+        <img id="cat" src="https://iili.io/HQmW1d7.png" alt="cat"></img>
+    </div>
     </div>
   )
 }

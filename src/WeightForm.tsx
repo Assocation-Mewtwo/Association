@@ -12,6 +12,7 @@ const WeightForm = (props) => {
     if (e.target.value.length === 0) {
       setStoneInput(false);
       setPoundsInput(false);
+      setKilo('')
     } else {
       setKilo(e.target.value);
       setStoneInput(true);
@@ -22,6 +23,7 @@ const WeightForm = (props) => {
     if (e.target.value.length === 0) {
       setStoneInput(false);
       setKiloInput(false);
+      setPound('');
     } else {
       setPound(e.target.value);
       setStoneInput(true);
@@ -32,6 +34,7 @@ const WeightForm = (props) => {
     if (e.target.value.length === 0) {
       setKiloInput(false);
       setPoundsInput(false);
+      setStone('');
     } else {
       setStone(e.target.value);
       setPoundsInput(true);

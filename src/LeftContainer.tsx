@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 
 const LeftContainer = (props) => {
-  const { kilo, setKilo, pound, setPound, stone, setStone, sendGrams} = props
+  const { kilo, setKilo, pound, setPound, stone, setStone, sendGrams, conversionResults} = props
 
   return (
     <div id="left-container">
@@ -18,6 +18,7 @@ const LeftContainer = (props) => {
       <h3 id="stoneResult">Stone</h3>
       <h4 id="stoneNumber">{stone}</h4>
       </div>
+      <button id="submitbutton" type='button' onClick={conversionResults}>Submit</button>
     </div>
   )
 }

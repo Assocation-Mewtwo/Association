@@ -32,8 +32,12 @@ nav {
   .resultsContainer {
     background: linear-gradient(124deg, #ff2400, #e81d1d, blue, #e3e81d, #1de840, #1ddde8, red, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
+    justify-content: center;
+    position: relative;
     margin: 5px;
     width: 8rem;
+    display: flex;
+    flex-grow: 1;
     height: 25rem;
    -webkit-animation: rainbow 18s ease infinite;
    -z-animation: rainbow 18s ease infinite;
@@ -61,18 +65,39 @@ nav {
       100%{background-position:0% 82%}
    }
   
+   #submitbutton {
+    position: absolute;
+    bottom: 0;
+  }
 
   #poundsResult {
-    
+    font-size: 30px;
   }
   
-  
   #kilosResult {
-    
+    font-size: 30px;
   }
 
   #stoneResult {
-    
+    font-size: 30px;
+  }
+
+  #poundsNumber {
+    font-size: 40px;
+    position: absolute;
+    padding-top: 50px;
+  }
+
+  #kilosNumber {
+    font-size: 40px;
+    position: absolute;
+    padding-top: 50px;
+  }
+
+  #stoneNumber {
+    font-size: 40px;
+    position: absolute;
+    padding-top: 50px;
   }
 
 /* weight form container styling */
@@ -118,4 +143,7 @@ nav {
   padding-left: 2em;
 }
 
+#submitbutton {
+  position: 
+}
 

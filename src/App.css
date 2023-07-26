@@ -1,36 +1,62 @@
 /* component .tsx file styling */
 
+body {
+  background-image: url("https://iili.io/HQmBfbj.gif");
+}
+
 /* banner container styling */
 nav {
   display: flex;
   flex-direction: row;
-  align-content: space-around;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  background-color:black;
 }
 
   #nav-right {
     display: flex;
     flex-direction: row;
+    color: white;
+    background: black;
+    background-color: black;
+  }
+
+  #nav-left {
+    font-size: 30px;
+    flex-direction: row;
+    font-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    width: 15rem;
+    font-color: white;
+    font-background: black;
+
   }
 
   #main-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+  .navbarheading {
+    margin: 1em;
   }
 
 /* left container styling */
 #left-container {
   margin: 1em 1em;
   border: 1px solid;
-  width: 35%;
   padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  }
+  flex-grow: 1;
+  min-height: 34rem;
+  background: white;
+}
 
   .resultsContainer {
-    background: linear-gradient(124deg, #ff2400, #e81d1d, blue, #e3e81d, #1de840, #1ddde8, red, #dd00f3, #dd00f3);
+    background: linear-gradient(#09C6F9, #045DE9);
     background-size: 1800% 1800%;
     justify-content: center;
     position: relative;
@@ -38,11 +64,11 @@ nav {
     width: 8rem;
     display: flex;
     flex-grow: 1;
-    height: 25rem;
-   -webkit-animation: rainbow 18s ease infinite;
-   -z-animation: rainbow 18s ease infinite;
-   -o-animation: rainbow 18s ease infinite;
-   animation: rainbow 18s ease infinite;
+    min-height: 33rem;
+   -webkit-animation: rainbow 4s ease infinite;
+   -z-animation: rainbow 4s ease infinite;
+   -o-animation: rainbow 4s ease infinite;
+   animation: rainbow 4s ease infinite;
   }
    @-webkit-keyframes rainbow {
       0%{background-position:0% 82%}
@@ -83,47 +109,50 @@ nav {
   }
 
   #poundsNumber {
-    font-size: 40px;
+    font-size: 5vh;
     position: absolute;
     padding-top: 50px;
   }
 
   #kilosNumber {
-    font-size: 40px;
+    font-size: 5vh;
     position: absolute;
     padding-top: 50px;
   }
 
   #stoneNumber {
-    font-size: 40px;
+    font-size: 5vh;
     position: absolute;
     padding-top: 50px;
   }
 
 /* weight form container styling */
 #weight-form {
-  background-color: lightblue;
+  background-color: #4383b7;
   padding: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .weight-input {
   border-radius: 5px;
   box-shadow: 12px 6px 2px 1px rgba(83, 83, 185, 0.2);
-
+  margin-left: 5.5rem;
 }
 
 .submitInput {
   border-radius: 5px;
+  margin-left: 6.5rem;
 }
 
 /* right container styling */
 #right-container {
   margin: 1em 1em;
   border: 1px solid;
-  padding: 15% 15%;
+  display: flex;
+  flex-grow: 2;
+  background: white;
 }
 
 /* ComparedTo styling */
@@ -132,15 +161,23 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background: white;
+  background-color: white;
+  min-height: 8rem;
+  align-items: center;
 }
 
 #compare-menu {
+  background: white;
+  background-color: white;
 }
 
 .dropup {
   /* background-color: purple; */
   align-self: center;
   padding-left: 2em;
+  background: white;
+  background-color: white;
 }
 
 #submitbutton {

@@ -11,6 +11,7 @@ function App() {
   const [kilo, setKilo] = useState('');
   const [pound, setPound] = useState('');
   const [stone, setStone] = useState('');
+  const [compareOptions, setCompareOptions] = useState([])
 
   const conversionResults = () => {
     if (kilo){
@@ -25,6 +26,7 @@ function App() {
     }
   }
 
+
   // form input conversion to grams for post request to db
   const sendGrams = async () => {
     let body;
@@ -37,15 +39,19 @@ function App() {
     }
       try {
         //Waiting for the route to be sent. 
-        const response = await fetch('/', {
+        console.log('body', body)
+        const rawResponse = await fetch('http://localhost:3000/postgrams', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({grams: body}),
         });
-        if (response.ok) {
+        //////////////////////////////////////////////////
+        if (rawResponse.ok) {
+          const data = await rawResponse.json();       
           console.log('Grams sent to Donald')
+          setCompareOptions(data);
           conversionResults()
         } else {
           console.error('Donald didn\'t get Grams');
@@ -64,8 +70,7 @@ function App() {
     <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} conversionResults={conversionResults}/>
     <RightContainer />
     </div>
-
-    <ComparedTo />
+    <ComparedTo compareOptions={compareOptions} setCompareOptions={setCompareOptions}/>
     </>
   )
 

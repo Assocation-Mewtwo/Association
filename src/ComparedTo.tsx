@@ -1,8 +1,9 @@
 //dropup menu containing available
 import React from 'react';
 
-const ComparedTo = () => {
+const ComparedTo = (props) => {
   // props coming from post request response body
+  const {compareOptions, setCompareOptions} = props
   const [value, setValue] = React.useState('results');
 
   // menu selection

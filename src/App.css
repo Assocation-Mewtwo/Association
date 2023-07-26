@@ -51,7 +51,9 @@ nav {
   flex-direction: row;
   align-items: center;
   flex-grow: 1;
-  min-height: 34rem;
+  min-width: 45%;
+  max-width: 45%;
+  height: 34rem;
   background: white;
 }
 
@@ -150,9 +152,17 @@ nav {
 #right-container {
   margin: 1em 1em;
   border: 1px solid;
+  height: 36rem;
   display: flex;
-  flex-grow: 2;
+  min-width: 45%;
+  max-width: 45%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
   background: white;
+  background-image: url("https://iili.io/HQmW1d7.png");
+  background-size: auto;
+  opacity: 100%;
 }
 
 /* ComparedTo styling */
@@ -184,3 +194,12 @@ nav {
   position: 
 }
 
+.images {
+  width: 100%;
+  height: auto;
+}
+
+.imagesDiv {
+  width: 8rem;
+  height: 8rem;
+}

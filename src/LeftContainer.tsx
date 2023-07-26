@@ -1,12 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
 import './App.css'
 
 const LeftContainer = (props) => {
-  const { kilo, pound, stone} = props
-  const [kilo2, setKilo2] = useState('');
-  const [pound2, setPound2] = useState('');
-  const [stone2, setStone2] = useState('');
+  const { kilo, pound, stone, kilo2, pound2, stone2, setKilo2, setPound2, setStone2} = props
 
   const submitConversion = () => {
     setKilo2(kilo);
@@ -28,7 +24,6 @@ const LeftContainer = (props) => {
       <h3 id="stoneResult">Stone</h3>
       <h4 id="stoneNumber">{stone2}</h4>
       </div>
-      <button id="submitbutton" type='button' onClick={submitConversion}>Submit</button>
     </div>
   )
 }

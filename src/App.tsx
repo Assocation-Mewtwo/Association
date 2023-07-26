@@ -13,30 +13,9 @@ function App() {
   const [stone, setStone] = useState('');
   const [compareOptions, setCompareOptions] = useState([])
 
-  const conversionResults = () => {
-    if (kilo){
-      setStone(kilo * 0.157473)
-      setPound(kilo * 2.20462)
-    } else if (stone){
-      setKilo(stone * 6.35029)
-      setPound(stone * 14)
-    } else if (pound){
-      setKilo(pound * 0.453592)
-      setStone(pound * 0.0714286)
-    }
-  }
-
-
   // form input conversion to grams for post request to db
   const sendGrams = async () => {
-    let body;
-    if (kilo){
-      body = kilo * 1000
-    } else if (stone){
-      body = (stone * 6.35029) * 1000
-    } else if (pound){
-      body = (pound * 0.453592) * 1000
-    }
+    const body = kilo * 1000;
       try {
         //Waiting for the route to be sent. 
         console.log('body', body)
@@ -52,7 +31,6 @@ function App() {
           const data = await rawResponse.json();       
           console.log('Grams sent to Donald')
           setCompareOptions(data);
-          conversionResults()
         } else {
           console.error('Donald didn\'t get Grams');
         }
@@ -67,7 +45,7 @@ function App() {
     <Banner />
     <WeightForm kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} />
     <div id="main-container">
-    <LeftContainer />
+    <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} />
     <RightContainer />
     </div>
     <ComparedTo compareOptions={compareOptions} setCompareOptions={setCompareOptions}/>

@@ -4,16 +4,16 @@ import React from 'react';
 const Banner = () => {
   return (
     <nav>
-      <div id="nav-left">
-        <h1>Association</h1>
-      </div>
+      <img id="nav-left" src="https://iili.io/HQZL9ln.png" alt="logo">
+  
+      </img>
 
       <div></div>
 
       <div id="nav-right">
-        <p>Weight</p>
-        <p>Temperature</p>
-        <p>Currency</p>
+        <h2 className="navbarheading">Weight</h2>
+        <h2 className="navbarheading">Temperature</h2>
+        <h2 className="navbarheading">Currency</h2>
       </div>
     </nav>
   );

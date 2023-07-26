@@ -12,30 +12,41 @@ const WeightForm = (props) => {
     if (e.target.value.length === 0) {
       setStoneInput(false);
       setPoundsInput(false);
+      setKilo('')
     } else {
       setKilo(e.target.value);
       setStoneInput(true);
       setPoundsInput(true);
+      setStone((e.target.value * 0.157473).toFixed(2));
+      setPound((e.target.value * 2.20462).toFixed(2));
     }
   };
+
   const changePounds = (e) => {
     if (e.target.value.length === 0) {
       setStoneInput(false);
       setKiloInput(false);
+      setPound('');
     } else {
       setPound(e.target.value);
       setStoneInput(true);
       setKiloInput(true);
+      setKilo((e.target.value * 0.453592).toFixed(2));
+      setStone((e.target.value * 0.0714286).toFixed(2));
     }
   };
+
   const changeStone = (e) => {
     if (e.target.value.length === 0) {
       setKiloInput(false);
       setPoundsInput(false);
+      setStone('');
     } else {
       setStone(e.target.value);
       setPoundsInput(true);
       setKiloInput(true);
+      setKilo((e.target.value * 6.35029).toFixed(2));
+      setPound((e.target.value * 14).toFixed(2));
     }
   };
 

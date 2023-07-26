@@ -14,8 +14,9 @@ function App() {
   const [kilo2, setKilo2] = useState('');
   const [pound2, setPound2] = useState('');
   const [stone2, setStone2] = useState('');
-  const [compareOptions, setCompareOptions] = useState([])
-  const [imageIndex, setImageIndex] = useState(0)
+  const [compareOptions, setCompareOptions] = useState([]);
+  const [imageIndex, setImageIndex] = useState(0);
+  const [imageCount, setImageCount] = useState(0);
 
   // form input conversion to grams for post request to db
   const sendGrams = async () => {

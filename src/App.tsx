@@ -57,7 +57,7 @@ function App() {
     <LeftContainer kilo={kilo} setKilo={setKilo} pound={pound} setPound={setPound} stone={stone} setStone={setStone} sendGrams={sendGrams} kilo2={kilo2} setKilo2={setKilo2} pound2={pound2} setPound2={setPound2} stone2={stone2} setStone2={setStone2}  />
     <RightContainer kilo={kilo} compareOptions={compareOptions} imageIndex={imageIndex}/>
     </div>
-    <ComparedTo compareOptions={compareOptions} setCompareOptions={setCompareOptions}/>
+    <ComparedTo compareOptions={compareOptions} setCompareOptions={setCompareOptions} setImageIndex={setImageIndex}/>
     </>
   )
 
